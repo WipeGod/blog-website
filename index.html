@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLife Blog - Your Digital Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1><i class="fas fa-blog"></i> TechLife Blog</h1>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active" data-post="all">Home</a></li>
+                    <li><a href="#post1" class="nav-link" data-post="1">Web Development</a></li>
+                    <li><a href="#post2" class="nav-link" data-post="2">AI & Machine Learning</a></li>
+                    <li><a href="#post3" class="nav-link" data-post="3">Digital Lifestyle</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search blog posts...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="technology">Technology</option>
+                    <option value="ai">AI & ML</option>
+                    <option value="lifestyle">Lifestyle</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Home Section -->
+            <section id="home" class="content-section active">
+                <div class="hero-section">
+                    <h2>Welcome to TechLife Blog</h2>
+                    <p>Exploring the intersection of technology and modern life</p>
+                </div>
+                
+                <!-- Blog Posts Grid -->
+                <div class="posts-grid" id="postsGrid">
+                    <!-- Posts will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <!-- Individual Post Sections -->
+            <section id="post1" class="content-section post-detail">
+                <article class="blog-post">
+                    <div class="post-header">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop" alt="Web Development" class="post-image">
+                        <div class="post-meta">
+                            <span class="category technology">Technology</span>
+                            <span class="date">January 15, 2024</span>
+                        </div>
+                        <h1>The Future of Web Development: Trends to Watch in 2024</h1>
+                    </div>
+                    
+                    <div class="post-content">
+                        <p>Web development continues to evolve at a rapid pace, with new frameworks, tools, and methodologies emerging regularly. As we navigate through 2024, several key trends are shaping the future of how we build and interact with web applications.</p>
+                        
+                        <h3>1. AI-Powered Development Tools</h3>
+                        <p>Artificial Intelligence is revolutionizing the development process. From code completion tools like GitHub Copilot to automated testing frameworks, AI is making developers more productive than ever before.</p>
+                        
+                        <h3>2. Progressive Web Apps (PWAs)</h3>
+                        <p>PWAs continue to bridge the gap between web and mobile applications, offering native-like experiences while maintaining the accessibility and reach of web technologies.</p>
+                        
+                        <h3>3. Serverless Architecture</h3>
+                        <p>The shift towards serverless computing is enabling developers to focus more on code and less on infrastructure management, leading to faster deployment cycles and reduced operational costs.</p>
+                        
+                        <p>These trends represent just the beginning of what promises to be an exciting year for web development. Stay tuned for more insights and tutorials!</p>
+                    </div>
+                    
+                    <!-- Social Share Buttons -->
+                    <div class="social-share">
+                        <h4>Share this post:</h4>
+                        <button class="share-btn twitter" data-platform="twitter">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </button>
+                        <button class="share-btn facebook" data-platform="facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </button>
+                        <button class="share-btn linkedin" data-platform="linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </button>
+                    </div>
+                </article>
+                
+                <!-- Comments Section -->
+                <section class="comments-section">
+                    <h3>Comments (<span id="commentCount1">0</span>)</h3>
+                    
+                    <form class="comment-form" id="commentForm1">
+                        <input type="text" id="commentName1" placeholder="Your Name" required>
+                        <textarea id="commentMessage1" placeholder="Your Comment" rows="4" required></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                    
+                    <div class="comments-list" id="commentsList1">
+                        <!-- Comments will be dynamically added here -->
+                    </div>
+                </section>
+            </section>
+
+            <section id="post2" class="content-section post-detail">
+                <article class="blog-post">
+                    <div class="post-header">
+                        <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800&h=400&fit=crop" alt="AI Machine Learning" class="post-image">
+                        <div class="post-meta">
+                            <span class="category ai">AI & ML</span>
+                            <span class="date">February 8, 2024</span>
+                        </div>
+                        <h1>Machine Learning in Everyday Applications: Beyond the Hype</h1>
+                    </div>
+                    
+                    <div class="post-content">
+                        <p>Machine Learning has moved beyond academic research and tech giants to become an integral part of everyday applications. From recommendation systems to predictive text, ML is quietly revolutionizing how we interact with technology.</p>
+                        
+                        <h3>Real-World Applications</h3>
+                        <p>Consider your daily routine: your email client filters spam, your music app suggests new songs, and your navigation app predicts traffic patterns. All of these rely on sophisticated ML algorithms working behind the scenes.</p>
+                        
+                        <h3>The Democratization of AI</h3>
+                        <p>Tools like TensorFlow, PyTorch, and cloud-based ML services have made it easier than ever for developers to integrate AI capabilities into their applications without requiring deep expertise in data science.</p>
+                        
+                        <h3>Ethical Considerations</h3>
+                        <p>As ML becomes more prevalent, we must address important questions about bias, privacy, and transparency. The future of AI depends on our ability to develop these technologies responsibly.</p>
+                        
+                        <p>The key is to focus on solving real problems rather than implementing AI for its own sake. When done right, machine learning can significantly enhance user experiences and business outcomes.</p>
+                    </div>
+                    
+                    <div class="social-share">
+                        <h4>Share this post:</h4>
+                        <button class="share-btn twitter" data-platform="twitter">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </button>
+                        <button class="share-btn facebook" data-platform="facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </button>
+                        <button class="share-btn linkedin" data-platform="linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </button>
+                    </div>
+                </article>
+                
+                <section class="comments-section">
+                    <h3>Comments (<span id="commentCount2">0</span>)</h3>
+                    
+                    <form class="comment-form" id="commentForm2">
+                        <input type="text" id="commentName2" placeholder="Your Name" required>
+                        <textarea id="commentMessage2" placeholder="Your Comment" rows="4" required></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                    
+                    <div class="comments-list" id="commentsList2">
+                        <!-- Comments will be dynamically added here -->
+                    </div>
+                </section>
+            </section>
+
+            <section id="post3" class="content-section post-detail">
+                <article class="blog-post">
+                    <div class="post-header">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop" alt="Digital Lifestyle" class="post-image">
+                        <div class="post-meta">
+                            <span class="category lifestyle">Lifestyle</span>
+                            <span class="date">March 3, 2024</span>
+                        </div>
+                        <h1>Digital Minimalism: Finding Balance in a Connected World</h1>
+                    </div>
+                    
+                    <div class="post-content">
+                        <p>In our hyperconnected world, the concept of digital minimalism has gained significant traction. It's not about rejecting technology entirely, but rather about being intentional with how we use digital tools to enhance rather than detract from our lives.</p>
+                        
+                        <h3>The Philosophy Behind Digital Minimalism</h3>
+                        <p>Digital minimalism, popularized by author Cal Newport, advocates for a selective approach to technology adoption. The core principle is simple: only use technologies that directly support something you deeply value.</p>
+                        
+                        <h3>Practical Steps to Get Started</h3>
+                        <p>Begin with a digital declutter: remove apps that don't add significant value, unsubscribe from unnecessary notifications, and establish tech-free zones in your home. The goal is to create space for more meaningful activities.</p>
+                        
+                        <h3>Benefits of a Minimalist Digital Life</h3>
+                        <p>Practitioners often report improved focus, better sleep quality, stronger relationships, and a greater sense of control over their time and attention. The key is finding the right balance for your lifestyle and goals.</p>
+                        
+                        <p>Remember, digital minimalism isn't about using less technology—it's about using technology more intentionally to support a life well-lived.</p>
+                    </div>
+                    
+                    <div class="social-share">
+                        <h4>Share this post:</h4>
+                        <button class="share-btn twitter" data-platform="twitter">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </button>
+                        <button class="share-btn facebook" data-platform="facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </button>
+                        <button class="share-btn linkedin" data-platform="linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </button>
+                    </div>
+                </article>
+                
+                <section class="comments-section">
+                    <h3>Comments (<span id="commentCount3">0</span>)</h3>
+                    
+                    <form class="comment-form" id="commentForm3">
+                        <input type="text" id="commentName3" placeholder="Your Name" required>
+                        <textarea id="commentMessage3" placeholder="Your Comment" rows="4" required></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                    
+                    <div class="comments-list" id="commentsList3">
+                        <!-- Comments will be dynamically added here -->
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechLife Blog</h3>
+                    <p>Exploring technology, AI, and digital lifestyle trends.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechLife Blog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
